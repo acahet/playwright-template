@@ -1,7 +1,13 @@
 import { defineConfig, devices } from '@playwright/test';
 import dotenv from 'dotenv';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
+// Convert import.meta.url to __filename and __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Load environment variables
 dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 
@@ -39,9 +45,15 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
+      name: 'ui',
       use: { ...devices['Desktop Chrome'] },
     },
+    /**
+     * uncomment below if you want to have an PW-API project
+     */
+    // {
+    //   name: 'api'
+    // },
 
     // {
     //   name: 'firefox',

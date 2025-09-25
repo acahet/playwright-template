@@ -5,6 +5,7 @@
   "repository": "https://github.com/acahet/playwright-template.git",
   "author": "Anderson Cahet",
   "license": "MIT",
+  "type": "module",
   "devDependencies": {
     "@playwright/test": "^1.55.1",
     "@types/node": "^24.5.2",
@@ -27,7 +28,10 @@
   },
    "scripts": {
     "lint": "npx eslint",
-    "test": "npx playwright test",
-    "test:ui": "npm run test --ui"
+    "code:format": "prettier --write \"tests/**/*.ts\"",
+    "test:ui": "npx playwright test --project ui",
+    "test:api": "npx playwright test --project api",
+    "test:ui-mode": "npm run test --ui",
+    "report": "yarn playwright show-report tests/report/playwright-report"
   }
 }

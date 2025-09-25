@@ -13,6 +13,7 @@
       "@config": ["tests/config/index.ts"]
     },
     "types": ["@playwright/test", "node"],
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    
   }
 }
