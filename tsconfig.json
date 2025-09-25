@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "paths": {
+      "@features/*": ["tests/ui/feature/*"],
+      "@fixtures": ["tests/fixtures.ts"],
+      "@pages/*": ["tests/ui/pages/*"],
+      "@config": ["tests/config/index.ts"]
+    },
+    "types": ["@playwright/test", "node"],
+    "moduleResolution": "node"
+  }
+}
