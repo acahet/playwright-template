@@ -10,10 +10,9 @@ export default [
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
       globals: globals.node,
       parserOptions: {
-        // projectService: {
-        //   allowDefaultProject: ['*.js', '*.ts', '*.mjs'],
-        // },
-        project: ['./tsconfig.json'],
+        projectService: {
+          allowDefaultProject: ['*.js', '*.ts', '*.mjs'],
+        },
         tsconfigRootDir: import.meta.dirname,
       },
     },
@@ -52,6 +51,7 @@ export default [
       '.auth',
       '.env',
       '*-snapshots',
+      'playwright.config.ts'
     ],
   },
 ];
